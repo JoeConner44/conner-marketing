@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Advertising — Conner Marketing Solutions</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body><div class="page">
+
+<div class="hero" style="min-height:50vh;"><div class="hero-bg"></div><div class="hero-dots"></div>
+<div class="hero-content">
+<div class="hero-eyebrow">Paid Advertising</div>
+<h1>Put your message in front of the <em>right people</em></h1>
+<p>We run targeted paid advertising campaigns on Google, Meta, and beyond — built around your goals, your budget, and your ideal customer.</p>
+<div class="btn-group"><a href="/contact.html" class="btn-white">Get a Free Quote →</a><a href="/services.html" class="btn-outline-white">All Services</a></div>
+</div></div>
+<section style="background:var(--cream);"><div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;">
+<div>
+<div class="section-label">What's Included</div>
+<h2>What we <em>deliver</em></h2>
+<div style="margin-top:2rem;display:flex;flex-direction:column;gap:1rem;">
+<div style='display:flex;gap:1rem;align-items:flex-start;'><div style='width:24px;height:24px;background:var(--warm-mid);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;'><svg width='10' height='10' viewBox='0 0 10 10' fill='none'><path d='M2 5l2 2 4-4' stroke='#1a3f6f' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg></div><p style='color:var(--text-muted);font-weight:300;line-height:1.7;'>Google Search and Display Ads campaign setup and management</p></div>
+<div style='display:flex;gap:1rem;align-items:flex-start;'><div style='width:24px;height:24px;background:var(--warm-mid);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;'><svg width='10' height='10' viewBox='0 0 10 10' fill='none'><path d='M2 5l2 2 4-4' stroke='#1a3f6f' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg></div><p style='color:var(--text-muted);font-weight:300;line-height:1.7;'>Facebook and Instagram ad campaigns with precise audience targeting</p></div>
+<div style='display:flex;gap:1rem;align-items:flex-start;'><div style='width:24px;height:24px;background:var(--warm-mid);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;'><svg width='10' height='10' viewBox='0 0 10 10' fill='none'><path d='M2 5l2 2 4-4' stroke='#1a3f6f' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg></div><p style='color:var(--text-muted);font-weight:300;line-height:1.7;'>Retargeting campaigns to re-engage website visitors who did not convert</p></div>
+<div style='display:flex;gap:1rem;align-items:flex-start;'><div style='width:24px;height:24px;background:var(--warm-mid);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;'><svg width='10' height='10' viewBox='0 0 10 10' fill='none'><path d='M2 5l2 2 4-4' stroke='#1a3f6f' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg></div><p style='color:var(--text-muted);font-weight:300;line-height:1.7;'>A/B testing on creatives and copy to maximize performance</p></div>
+<div style='display:flex;gap:1rem;align-items:flex-start;'><div style='width:24px;height:24px;background:var(--warm-mid);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;'><svg width='10' height='10' viewBox='0 0 10 10' fill='none'><path d='M2 5l2 2 4-4' stroke='#1a3f6f' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg></div><p style='color:var(--text-muted);font-weight:300;line-height:1.7;'>Conversion tracking setup so you know exactly what your spend is generating</p></div>
+<div style='display:flex;gap:1rem;align-items:flex-start;'><div style='width:24px;height:24px;background:var(--warm-mid);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;'><svg width='10' height='10' viewBox='0 0 10 10' fill='none'><path d='M2 5l2 2 4-4' stroke='#1a3f6f' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg></div><p style='color:var(--text-muted);font-weight:300;line-height:1.7;'>Monthly reporting with clear ROI metrics and optimization recommendations</p></div>
+</div>
+</div>
+<div style="background:var(--white);border-radius:1.5rem;padding:2.5rem;">
+<div class="section-label">Why It Matters</div>
+<h3 style="margin-bottom:1rem;">Every dollar should work as hard as possible</h3>
+<p style="color:var(--text-muted);font-weight:300;line-height:1.8;margin-bottom:2rem;">Ready to see what this can do for your business? We offer a free consultation with no obligation.</p>
+<a href="/contact.html" class="btn-navy" style="display:inline-flex;">Start the Conversation →</a>
+</div>
+</div></section>
+<section style="background:var(--navy);text-align:center;padding:4.5rem 4rem;">
+<h2 style="color:var(--white);max-width:480px;margin:0 auto 1.5rem;">Ready to get started?</h2>
+<p style="color:rgba(255,255,255,0.55);max-width:380px;margin:0 auto 2rem;font-weight:300;">Free consultation, no pressure. Let's talk about what CMS can do for you.</p>
+<a href="/contact.html" class="btn-white">Book a Free Call →</a>
+</section>
+<footer><div class="footer-grid"><div class="footer-brand"><div class="footer-logo-name">Conner Marketing Solutions</div><p>Georgia-based web design, local SEO, and digital marketing.</p><p style="margin-top:0.75rem;"><a href="tel:7707789877" style="color:rgba(255,255,255,0.55);text-decoration:none;">(770) 778-9877</a></p></div><div class="footer-col"><h4>Services</h4><ul><li><a href="/services/web-design.html">Web Design &amp; Dev</a></li><li><a href="/services/local-seo.html">Local SEO</a></li><li><a href="/services/social-media.html">Social Media</a></li><li><a href="/services/digital-advertising.html">Digital Advertising</a></li><li><a href="/services/promotional.html">Promotional</a></li><li><a href="/services/hosting.html">Hosting</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul><li><a href="/about.html">About</a></li><li><a href="/portfolio.html">Portfolio</a></li><li><a href="/learn.html">Learn</a></li><li><a href="/contact.html">Contact</a></li></ul></div><div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:7707789877">(770) 778-9877</a></li><li><a href="/contact.html">Free Consultation</a></li></ul></div></div><div class="footer-bottom"><p>© 2025 Conner Marketing Solutions. All rights reserved.</p><p>Serving Georgia &amp; Beyond</p></div></footer>
+</div><script>const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.style.opacity="1";x.target.style.transform="translateY(0)"}}),{threshold:0.12});document.querySelectorAll(".service-card,.step,.portfolio-card,.fade-scroll").forEach(el=>{el.style.opacity="0";el.style.transform="translateY(20px)";el.style.transition="opacity 0.6s ease, transform 0.6s ease";obs.observe(el)});const path=window.location.pathname;document.querySelectorAll("nav a").forEach(a=>{if(a.getAttribute("href")===path)a.classList.add("active")});</script></body></html>
