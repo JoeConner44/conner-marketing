@@ -3,249 +3,61 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Conner Marketing Solutions — Web Design, Local SEO & Digital Marketing in Georgia</title>
-<meta name="description" content="Conner Marketing Solutions builds high-performance websites, drives local SEO rankings, and runs digital marketing campaigns for Georgia businesses.">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="stylesheet" href="/style.css">
+<meta name="description" content="About Conner Marketing Solutions — a Georgia-based web design, development, and local SEO agency.">
+<title>About | Conner Marketing Solutions | Conner Marketing Solutions</title>
+<link rel="icon" type="image/x-icon" href="/conner-marketing/favicon.ico">
+<link rel="stylesheet" href="/conner-marketing/style.css">
+<style>.about-split{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.about-img{background:var(--warm-mid);border-radius:1.5rem;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;position:relative;font-size:4rem}
+.about-badge{position:absolute;bottom:-1.5rem;right:-1.5rem;background:var(--navy);color:var(--white);padding:1.25rem 1.75rem;border-radius:1rem;font-family:'Playfair Display',serif}
+.about-badge .ab-num{font-size:2.5rem;font-weight:700;line-height:1;display:block}
+.about-badge .ab-label{font-size:.75rem;opacity:.75;letter-spacing:.04em}
+.about-text p{color:var(--text-muted);font-weight:300;line-height:1.8;margin-bottom:1rem}
+.pills{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.75rem 0}
+.pill{padding:.4rem 1rem;border:1px solid rgba(26,63,111,.2);border-radius:2rem;font-size:.8rem;font-weight:500;color:var(--navy)}
+.vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.vcard{background:var(--white);border-radius:1rem;padding:2rem 1.75rem}
+.vcard h3{font-size:1.1rem;margin-bottom:.6rem}
+.vcard p{color:var(--text-muted);font-size:.88rem;font-weight:300;line-height:1.7}
+@media(max-width:960px){.about-split{grid-template-columns:1fr;gap:2rem}.about-img{display:none}.vgrid{grid-template-columns:1fr}}</style>
 </head>
 <body>
-<div class="page">
-
-<nav>
-  <a href="/index.html" class="nav-logo">
-    <img src="/cms-logo.png" alt="Conner Marketing Solutions">
-    <span class="nav-logo-text">Conner Marketing Solutions</span>
-  </a>
-  <ul>
-    <li><a href="/index.html">Home</a></li>
-    <li class="has-dropdown">
-      <a href="/services.html">Services</a>
-      <div class="dropdown">
-        <a href="/services/web-design.html">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="2" width="14" height="10" rx="1.5" stroke="#1a3f6f" stroke-width="1.2"/><path d="M5 14h6M8 12v2" stroke="#1a3f6f" stroke-width="1.2" stroke-linecap="round"/></svg>
-          Web Design &amp; Development
-        </a>
-        <a href="/services/local-seo.html">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="7" r="4" stroke="#1a3f6f" stroke-width="1.2"/><path d="M8 3c0 0-3 2.5-3 4s1.34 2 3 2 3-.89 3-2-3-4-3-4z" stroke="#1a3f6f" stroke-width="1.2"/><path d="M2 7h12M8 3a9.5 9.5 0 0 1 0 8M8 3a9.5 9.5 0 0 0 0 8" stroke="#1a3f6f" stroke-width="1.2" stroke-linecap="round"/></svg>
-          Local SEO
-        </a>
-        <a href="/services/social-media.html">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="12" cy="3" r="1.5" stroke="#1a3f6f" stroke-width="1.2"/><circle cx="4" cy="8" r="1.5" stroke="#1a3f6f" stroke-width="1.2"/><circle cx="12" cy="13" r="1.5" stroke="#1a3f6f" stroke-width="1.2"/><path d="M5.5 7.2l5-3M5.5 8.8l5 3" stroke="#1a3f6f" stroke-width="1.2" stroke-linecap="round"/></svg>
-          Social Media Marketing
-        </a>
-        <a href="/services/digital-advertising.html">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="10" cy="6" r="4" stroke="#1a3f6f" stroke-width="1.2"/><circle cx="10" cy="6" r="1.5" stroke="#1a3f6f" stroke-width="1.2"/><path d="M3 13l4-4" stroke="#1a3f6f" stroke-width="1.2" stroke-linecap="round"/></svg>
-          Digital Advertising
-        </a>
-        <a href="/services/promotional.html">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="7" width="12" height="1.5" rx="0.75" stroke="#1a3f6f" stroke-width="1.2"/><rect x="3.5" y="8.5" width="9" height="5.5" rx="1" stroke="#1a3f6f" stroke-width="1.2"/><path d="M8 7c0-1.5 1.5-4 2.5-4S12 4 10.5 7M8 7c0-1.5-1.5-4-2.5-4S4 4 5.5 7" stroke="#1a3f6f" stroke-width="1.2" stroke-linecap="round"/><line x1="8" y1="8.5" x2="8" y2="14" stroke="#1a3f6f" stroke-width="1.2" stroke-linecap="round"/></svg>
-          Promotional Marketing
-        </a>
-        <a href="/services/hosting.html">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="4" width="12" height="3.5" rx="1" stroke="#1a3f6f" stroke-width="1.2"/><rect x="2" y="9" width="12" height="3.5" rx="1" stroke="#1a3f6f" stroke-width="1.2"/><circle cx="12" cy="5.75" r="0.75" fill="#1a3f6f"/><circle cx="12" cy="10.75" r="0.75" fill="#1a3f6f"/></svg>
-          Website Hosting
-        </a>
-      </div>
-    </li>
-    <li><a href="/portfolio.html">Portfolio</a></li>
-    <li><a href="/about.html">About</a></li>
-    <li><a href="/learn.html">Learn</a></li>
-    <li><a href="/contact.html" class="nav-cta">Get a Quote</a></li>
-  </ul>
-</nav>
-
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-dots"></div>
-  <div class="hero-content">
-    <div class="hero-eyebrow fade-up">Georgia-Based Web Design &amp; Marketing</div>
-    <h1 class="fade-up delay-1">We build websites that<br><em>grow your business.</em></h1>
-    <p class="fade-up delay-2">From custom web design and local SEO to digital advertising and social media — Conner Marketing Solutions delivers measurable results for businesses across Georgia.</p>
-    <div class="btn-group fade-up delay-3">
-      <a href="/contact.html" class="btn-white">Get a Free Quote →</a>
-      <a href="/portfolio.html" class="btn-outline-white">See Our Work</a>
-    </div>
-  </div>
-</div>
-
-<!-- STATS -->
-<div class="stats-bar">
-  <div class="stat-item"><div class="stat-num">50+</div><div class="stat-label">Clients Served</div></div>
-  <div class="stat-item"><div class="stat-num">3.8×</div><div class="stat-label">Avg. Engagement Growth</div></div>
-  <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Georgia-Based Team</div></div>
-  <div class="stat-item"><div class="stat-num">6</div><div class="stat-label">Core Services</div></div>
-</div>
-
-<!-- MARQUEE -->
-<div class="marquee-strip" aria-hidden="true">
-  <div class="marquee-inner">
-    <span>Web Design</span><span class="dot">·</span><span>Local SEO</span><span class="dot">·</span><span>Digital Advertising</span><span class="dot">·</span><span>Social Media</span><span class="dot">·</span><span>Website Hosting</span><span class="dot">·</span><span>Promotional Marketing</span><span class="dot">·</span>
-    <span>Web Design</span><span class="dot">·</span><span>Local SEO</span><span class="dot">·</span><span>Digital Advertising</span><span class="dot">·</span><span>Social Media</span><span class="dot">·</span><span>Website Hosting</span><span class="dot">·</span><span>Promotional Marketing</span><span class="dot">·</span>
-  </div>
-</div>
-
-<!-- SERVICES -->
-<section style="background:var(--cream);">
-  <div style="display:grid;grid-template-columns:1fr 1fr;align-items:end;gap:2rem;margin-bottom:3.5rem;">
-    <div>
-      <div class="section-label">What We Do</div>
-      <h2>Everything your business needs to <em>win online</em></h2>
-    </div>
-    <p style="color:var(--text-muted);font-weight:300;max-width:380px;justify-self:end;">Every service is tailored to your goals. No packages you don't need. No budget wasted.</p>
-  </div>
-  <div class="services-grid">
-    <a href="/services/web-design.html" class="service-card">
-      <div class="service-icon">
-        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="3" y="4" width="20" height="14" rx="2" stroke="#1a3f6f" stroke-width="1.25"/><path d="M9 22h8M13 18v4" stroke="#1a3f6f" stroke-width="1.25" stroke-linecap="round"/><path d="M3 14h20" stroke="#1a3f6f" stroke-width="1.25"/></svg>
-      </div>
-      <h3>Web Design &amp; Development</h3>
-      <p>Custom, high-performance websites built to convert visitors into customers. Fast, mobile-first, and designed to rank.</p>
-      <span class="arrow-link">Learn more →</span>
-    </a>
-    <a href="/services/local-seo.html" class="service-card">
-      <div class="service-icon">
-        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="11" r="6" stroke="#1a3f6f" stroke-width="1.25"/><path d="M13 5c0 0-4 3-4 6s1.8 3 4 3 4-1.2 4-3-4-6-4-6z" stroke="#1a3f6f" stroke-width="1.25"/><path d="M5 11h16M13 5a13 13 0 0 1 0 12M13 5a13 13 0 0 0 0 12" stroke="#1a3f6f" stroke-width="1.25" stroke-linecap="round"/><path d="M13 19l2 4" stroke="#1a3f6f" stroke-width="1.25" stroke-linecap="round"/></svg>
-      </div>
-      <h3>Local SEO</h3>
-      <p>Dominate Google search results in your area. We optimize your presence so local customers find you first.</p>
-      <span class="arrow-link">Learn more →</span>
-    </a>
-    <a href="/services/social-media.html" class="service-card">
-      <div class="service-icon">
-        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="20" cy="5" r="2.5" stroke="#1a3f6f" stroke-width="1.25"/><circle cx="6" cy="13" r="2.5" stroke="#1a3f6f" stroke-width="1.25"/><circle cx="20" cy="21" r="2.5" stroke="#1a3f6f" stroke-width="1.25"/><path d="M8.4 11.7l9.2-5M8.4 14.3l9.2 5" stroke="#1a3f6f" stroke-width="1.25" stroke-linecap="round"/></svg>
-      </div>
-      <h3>Social Media Marketing</h3>
-      <p>Strategic content, community management, and growth campaigns tailored to your brand and audience.</p>
-      <span class="arrow-link">Learn more →</span>
-    </a>
-    <a href="/services/digital-advertising.html" class="service-card">
-      <div class="service-icon">
-        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="16" cy="10" r="6" stroke="#1a3f6f" stroke-width="1.25"/><circle cx="16" cy="10" r="3" stroke="#1a3f6f" stroke-width="1.25"/><circle cx="16" cy="10" r="1" fill="#1a3f6f"/><path d="M5 21l6.5-6.5" stroke="#1a3f6f" stroke-width="1.25" stroke-linecap="round"/></svg>
-      </div>
-      <h3>Digital Advertising</h3>
-      <p>Google Ads, Meta campaigns, and retargeting strategies that put your message in front of the right people.</p>
-      <span class="arrow-link">Learn more →</span>
-    </a>
-    <a href="/services/promotional.html" class="service-card">
-      <div class="service-icon">
-        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="4" y="11" width="18" height="2.5" rx="1" stroke="#1a3f6f" stroke-width="1.25"/><rect x="6" y="13.5" width="14" height="8" rx="1" stroke="#1a3f6f" stroke-width="1.25"/><path d="M13 11c0-2 1.5-4.5 3-4.5S18 8 16 11M13 11c0-2-1.5-4.5-3-4.5S8 8 10 11" stroke="#1a3f6f" stroke-width="1.25" stroke-linecap="round"/><line x1="13" y1="13.5" x2="13" y2="21.5" stroke="#1a3f6f" stroke-width="1.25" stroke-linecap="round"/></svg>
-      </div>
-      <h3>Promotional Marketing</h3>
-      <p>Branded merchandise, promotional campaigns, and full-pipeline fulfillment — creative to shipping, handled.</p>
-      <span class="arrow-link">Learn more →</span>
-    </a>
-    <a href="/services/hosting.html" class="service-card">
-      <div class="service-icon">
-        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="3" y="6" width="20" height="5" rx="1.5" stroke="#1a3f6f" stroke-width="1.25"/><rect x="3" y="15" width="20" height="5" rx="1.5" stroke="#1a3f6f" stroke-width="1.25"/><circle cx="19" cy="8.5" r="1" fill="#1a3f6f"/><circle cx="19" cy="17.5" r="1" fill="#1a3f6f"/></svg>
-      </div>
-      <h3>Website Hosting</h3>
-      <p>Fast, reliable managed hosting with ongoing support. We keep your site up, secure, and running at full speed.</p>
-      <span class="arrow-link">Learn more →</span>
-    </a>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section class="process-section">
-  <div class="section-label">How It Works</div>
-  <h2>A simple process, <em>exceptional</em> results</h2>
-  <div class="process-steps">
-    <div class="step"><div class="step-num">01</div><h3>Discovery Call</h3><p>Free consultation to understand your business, goals, and current challenges.</p></div>
-    <div class="step"><div class="step-num">02</div><h3>Custom Strategy</h3><p>We build a tailored plan based on your audience, market, and objectives.</p></div>
-    <div class="step"><div class="step-num">03</div><h3>Execution</h3><p>Our team handles the creative, technical, and campaign work end-to-end.</p></div>
-    <div class="step"><div class="step-num">04</div><h3>Optimize &amp; Grow</h3><p>Ongoing monitoring, reporting, and refinement to keep results climbing.</p></div>
-  </div>
-</section>
-
-<!-- PORTFOLIO PREVIEW -->
-<section style="background:var(--cream);">
-  <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem;flex-wrap:wrap;gap:1rem;">
-    <div>
-      <div class="section-label">Our Work</div>
-      <h2>Recent <em>projects</em></h2>
-    </div>
-    <a href="/portfolio.html" class="btn-navy">View All Work →</a>
-  </div>
-  <div class="portfolio-grid">
-    <div class="portfolio-card">
-      <img src="/images/state-mechanical.png" alt="State Mechanical Heating &amp; Air" class="portfolio-img">
-      <div class="portfolio-info">
-        <h3>State Mechanical Heating &amp; Air</h3>
-        <p>Custom website with local SEO for a 50-year-old HVAC company in Walton County, GA.</p>
-        <div class="portfolio-tags"><span class="tag">Web Design</span><span class="tag">Local SEO</span></div>
-        <a href="http://statemechanicalga.com/" target="_blank" rel="noopener" class="portfolio-link">Visit site →</a>
-      </div>
-    </div>
-    <div class="portfolio-card">
-      <img src="/images/insurance-quote-hub.png" alt="Insurance Quote Hub" class="portfolio-img">
-      <div class="portfolio-info">
-        <h3>Insurance Quote Hub</h3>
-        <p>Lead generation website for an auto insurance comparison platform.</p>
-        <div class="portfolio-tags"><span class="tag">Web Design</span><span class="tag">Development</span></div>
-        <a href="https://insquotehub.com/" target="_blank" rel="noopener" class="portfolio-link">Visit site →</a>
-      </div>
+<div class="page-hero">
+  <div class="section-label">About CMS</div>
+  <h1>Georgia's <em>results-driven</em><br>marketing partner</h1>
+  <p>We're a small, focused team helping local businesses compete and win online — without the big-agency price tag.</p>
+  
+</div><section class="section-cream">
+  <div class="about-split">
+    <div class="about-img">🤝<div class="about-badge"><span class="ab-num">5★</span><span class="ab-label">Client Satisfaction</span></div></div>
+    <div class="about-text">
+      <div class="section-label">Our Story</div>
+      <h2>Built on a simple <em>belief</em></h2>
+      <p>Conner Marketing Solutions was built on a simple belief: local businesses deserve great websites and real marketing — not overpriced templates and empty promises.</p>
+      <p>Based in Georgia, we design, develop, and host websites that actually get found — then back them up with SEO, social media, and advertising that drives real customers.</p>
+      <p>Most of our clients are local service businesses — contractors, medical practices, restaurants, and retailers — who need a marketing partner they can actually talk to.</p>
+      <div class="pills"><span class="pill">Web Design &amp; Dev</span><span class="pill">Local SEO</span><span class="pill">Website Hosting</span><span class="pill">Digital Advertising</span><span class="pill">Social Media</span><span class="pill">Promo Marketing</span></div>
+      <a href="/conner-marketing/contact/" class="btn-primary">Work With Us →</a>
     </div>
   </div>
 </section>
-
-<!-- CTA BAND -->
-<section style="background:var(--navy);text-align:center;padding:5rem 4rem;">
-  <div class="section-label" style="color:rgba(255,255,255,0.45);justify-content:center;">Ready to grow?</div>
-  <h2 style="color:var(--white);max-width:560px;margin:0 auto 1.5rem;">Let's build something <em>great</em> together</h2>
-  <p style="color:rgba(255,255,255,0.55);font-weight:300;max-width:420px;margin:0 auto 2.5rem;">Schedule a free consultation and find out what CMS can do for your business.</p>
-  <a href="/contact.html" class="btn-white">Get a Free Quote →</a>
+<section class="section-white">
+  <div class="section-label">What We Stand For</div>
+  <h2>Our <em>values</em></h2>
+  <div class="vgrid">
+    <div class="vcard scroll-reveal"><h3>Honesty First</h3><p>We don't oversell or overpromise. If something won't work for your business, we'll tell you.</p></div>
+    <div class="vcard scroll-reveal"><h3>Real Results</h3><p>Rankings, leads, and revenue — not vanity metrics. Everything tied back to what grows your business.</p></div>
+    <div class="vcard scroll-reveal"><h3>Local Focus</h3><p>Georgia-based and proud of it. We understand the local market and what it takes to win.</p></div>
+    <div class="vcard scroll-reveal"><h3>Clean Work</h3><p>No bloated themes. No hidden fees. No outsourced work. Clean code and quality we stand behind.</p></div>
+    <div class="vcard scroll-reveal"><h3>Always Accessible</h3><p>When you need us, you reach a real person. We're a phone call or text away.</p></div>
+    <div class="vcard scroll-reveal"><h3>Growing Together</h3><p>Your success is our success. We're invested in your long-term results, not just project delivery.</p></div>
+  </div>
+</section><section class="section-dark" style="text-align:center;padding:5rem 4rem;">
+  <div class="section-label" style="justify-content:center;">Let's Connect</div>
+  <h2 style="max-width:560px;margin:0 auto 1rem;">Ready to work with a team that <em>actually cares?</em></h2>
+  <p style="max-width:460px;margin:0 auto 2.5rem;color:rgba(255,255,255,.5);font-weight:300;">Free, no-pressure call. We'll listen first, then tell you honestly what will work.</p>
+  <a href="/conner-marketing/contact/" class="btn-primary">Book a Free Call →</a>
 </section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <div class="footer-logo-name">Conner Marketing Solutions</div>
-      <p>Georgia-based web design, local SEO, and digital marketing. We help local businesses compete and win online.</p>
-      <p style="margin-top:0.75rem;"><a href="tel:7707789877" style="color:rgba(255,255,255,0.55);text-decoration:none;">(770) 778-9877</a></p>
-    </div>
-    <div class="footer-col">
-      <h4>Services</h4>
-      <ul>
-        <li><a href="/services/web-design.html">Web Design &amp; Dev</a></li>
-        <li><a href="/services/local-seo.html">Local SEO</a></li>
-        <li><a href="/services/social-media.html">Social Media</a></li>
-        <li><a href="/services/digital-advertising.html">Digital Advertising</a></li>
-        <li><a href="/services/promotional.html">Promotional</a></li>
-        <li><a href="/services/hosting.html">Hosting</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Company</h4>
-      <ul>
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/portfolio.html">Portfolio</a></li>
-        <li><a href="/learn.html">Learn</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <ul>
-        <li><a href="tel:7707789877">(770) 778-9877</a></li>
-        <li><a href="/contact.html">Send a Message</a></li>
-        <li><a href="/contact.html">Free Consultation</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2025 Conner Marketing Solutions. All rights reserved.</p>
-    <p>Serving Georgia &amp; Beyond</p>
-  </div>
-</footer>
-
-</div>
-<script>
-const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting){ x.target.style.opacity='1'; x.target.style.transform='translateY(0)'; }}), {threshold:0.12});
-document.querySelectorAll('.service-card,.step,.portfolio-card,.stat-item').forEach(el => { el.style.opacity='0'; el.style.transform='translateY(20px)'; el.style.transition='opacity 0.6s ease, transform 0.6s ease'; obs.observe(el); });
-const path = window.location.pathname;
-document.querySelectorAll('nav a').forEach(a => { if(a.getAttribute('href') === path || (path === '/' && a.getAttribute('href') === '/index.html')) a.classList.add('active'); });
-</script>
+<script src="/conner-marketing/nav.js"></script>
 </body>
 </html>
