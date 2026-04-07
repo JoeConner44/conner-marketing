@@ -13,9 +13,9 @@
   var inSvc = p.indexOf(B + '/services') === 0;
 
   document.body.insertAdjacentHTML('afterbegin', '<nav>' +
-    '<a href="' + B + '/" class="logo">' +
-      '<img src="' + B + '/cms-logo.png" alt="Conner Marketing Solutions" style="height:40px;width:auto;display:block;" onerror="this.style.display=\'none\';this.nextSibling.style.display=\'block\'">' +
-      '<span class="logo-text" style="display:none;">CMS.</span>' +
+    '<a href="' + B + '/" class="logo" style="display:flex;align-items:center;gap:0.7rem;text-decoration:none;">' +
+      '<img src="' + B + '/cms-logo.png" alt="CMS Logo" style="height:42px;width:auto;display:block;">' +
+      '<span style="font-family:Georgia,Times New Roman,serif;font-size:0.82rem;font-weight:700;color:#0d1b2e;line-height:1.3;letter-spacing:0.01em;">Conner<br>Marketing<br>Solutions</span>' +
     '</a>' +
     '<ul>' +
       '<li><a href="' + B + '/" class="' + a(B + '/') + '">Home</a></li>' +
