@@ -78,7 +78,6 @@
 </script>
 <script>
 function submitForm(btn) {
-  // Grab values
   var firstName = document.getElementById('fn').value.trim();
   var lastName  = document.getElementById('ln').value.trim();
   var email     = document.getElementById('em').value.trim();
@@ -88,7 +87,6 @@ function submitForm(btn) {
   var message   = document.getElementById('msg').value.trim();
   var msgEl     = document.getElementById('form-msg');
 
-  // Basic validation
   if(!firstName || !email) {
     msgEl.style.display = 'block';
     msgEl.style.color = '#c0392b';
@@ -103,40 +101,46 @@ function submitForm(btn) {
 
   var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxTyy94WZxbSrlslsEggjfbLtnYuFPD4QL__ZTsAJ4Ilc2v7TDdolSWR3obngXcFtjN/exec';
 
-  fetch(SCRIPT_URL, {
-    method: 'POST',
-    mode: 'no-cors',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      firstName: firstName,
-      lastName:  lastName,
-      email:     email,
-      phone:     phone,
-      business:  business,
-      service:   service,
-      message:   message
-    })
-  })
-  .then(function() {
+  // Use a hidden iframe to handle the CORS issue with Apps Script
+  var iframe = document.createElement('iframe');
+  iframe.name = 'hidden_iframe';
+  iframe.style.display = 'none';
+  document.body.appendChild(iframe);
+
+  var form = document.createElement('form');
+  form.method = 'POST';
+  form.action = SCRIPT_URL;
+  form.target = 'hidden_iframe';
+
+  var fields = {
+    firstName: firstName, lastName: lastName, email: email,
+    phone: phone, business: business, service: service, message: message
+  };
+
+  Object.keys(fields).forEach(function(key) {
+    var input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = key;
+    input.value = fields[key];
+    form.appendChild(input);
+  });
+
+  document.body.appendChild(form);
+
+  iframe.onload = function() {
     btn.textContent = '✓ Message Sent!';
     btn.style.background = '#1a5c3a';
     msgEl.style.display = 'block';
     msgEl.style.color = '#1a5c3a';
-    msgEl.textContent = "Thanks! We'll be in touch within one business day.";
-    // Clear form
+    msgEl.textContent = "Thanks! We’ll be in touch within one business day.";
     ['fn','ln','em','ph','bz','msg'].forEach(function(id){
       document.getElementById(id).value = '';
     });
     document.getElementById('sv').selectedIndex = 0;
-  })
-  .catch(function(err) {
-    btn.disabled = false;
-    btn.textContent = 'Send Free Quote Request →';
-    btn.style.background = '';
-    msgEl.style.display = 'block';
-    msgEl.style.color = '#c0392b';
-    msgEl.textContent = 'Something went wrong. Please try again or call (770) 778-9877.';
-  });
+    document.body.removeChild(form);
+  };
+
+  form.submit();
 }
 </script>
 <script src="/nav.js"></script>
