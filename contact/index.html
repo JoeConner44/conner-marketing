@@ -99,48 +99,54 @@ function submitForm(btn) {
   btn.style.background = '#2a5fa8';
   msgEl.style.display = 'none';
 
-  var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxTyy94WZxbSrlslsEggjfbLtnYuFPD4QL__ZTsAJ4Ilc2v7TDdolSWR3obngXcFtjN/exec';
-
-  // Use a hidden iframe to handle the CORS issue with Apps Script
+  // Build hidden iframe + form posting directly to Google Forms
   var iframe = document.createElement('iframe');
-  iframe.name = 'hidden_iframe';
+  iframe.name = 'gform_iframe';
   iframe.style.display = 'none';
   document.body.appendChild(iframe);
 
   var form = document.createElement('form');
   form.method = 'POST';
-  form.action = SCRIPT_URL;
-  form.target = 'hidden_iframe';
+  form.action = 'https://docs.google.com/forms/d/e/1FAIpQLSfZbwVhF1d-BIcUfiFW0TpIuMwmNfjsycPBriEdlcj06Z4lSA/formResponse';
+  form.target = 'gform_iframe';
 
   var fields = {
-    firstName: firstName, lastName: lastName, email: email,
-    phone: phone, business: business, service: service, message: message
+    'entry.165531712': firstName,
+    'entry.393307090': lastName,
+    'entry.137094471': email,
+    'entry.613100451': phone,
+    'entry.289970755': business,
+    'entry.2004443733': service,
+    'entry.227625189': message
   };
 
-  Object.keys(fields).forEach(function(key) {
+  Object.keys(fields).forEach(function(name) {
     var input = document.createElement('input');
-    input.type = 'hidden';
-    input.name = key;
-    input.value = fields[key];
+    input.type  = 'hidden';
+    input.name  = name;
+    input.value = fields[name];
     form.appendChild(input);
   });
 
   document.body.appendChild(form);
+  form.submit();
 
-  iframe.onload = function() {
+  // Show success after short delay (iframe load isn't reliable cross-origin)
+  setTimeout(function() {
     btn.textContent = '✓ Message Sent!';
     btn.style.background = '#1a5c3a';
     msgEl.style.display = 'block';
     msgEl.style.color = '#1a5c3a';
     msgEl.textContent = "Thanks! We’ll be in touch within one business day.";
-    ['fn','ln','em','ph','bz','msg'].forEach(function(id){
-      document.getElementById(id).value = '';
-    });
+    document.getElementById('fn').value = '';
+    document.getElementById('ln').value = '';
+    document.getElementById('em').value = '';
+    document.getElementById('ph').value = '';
+    document.getElementById('bz').value = '';
+    document.getElementById('msg').value = '';
     document.getElementById('sv').selectedIndex = 0;
     document.body.removeChild(form);
-  };
-
-  form.submit();
+  }, 1500);
 }
 </script>
 <script src="/nav.js"></script>
