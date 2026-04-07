@@ -44,6 +44,37 @@
     </div>
   </div>
 </section>
+<script>
+(function(){
+  var params = new URLSearchParams(window.location.search);
+  var svc = params.get('service');
+  var msg = params.get('msg');
+
+  if(svc){
+    var sel = document.getElementById('sv');
+    if(sel){
+      for(var i=0; i<sel.options.length; i++){
+        if(sel.options[i].text.toLowerCase().indexOf(svc.toLowerCase().split(' ')[0]) !== -1){
+          sel.selectedIndex = i;
+          break;
+        }
+      }
+      // Try exact match first
+      for(var i=0; i<sel.options.length; i++){
+        if(sel.options[i].text === svc){
+          sel.selectedIndex = i;
+          break;
+        }
+      }
+    }
+  }
+
+  if(msg){
+    var ta = document.getElementById('msg');
+    if(ta) ta.value = decodeURIComponent(msg);
+  }
+})();
+</script>
 <script src="/conner-marketing/nav.js"></script>
 </body>
 </html>
