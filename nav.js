@@ -12,16 +12,10 @@
 
   var inSvc = p.indexOf(B + '/services') === 0;
 
-  // Load Cormorant Garamond
-var _cgLink = document.createElement('link');
-_cgLink.rel = 'stylesheet';
-_cgLink.href = 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&display=swap';
-document.head.appendChild(_cgLink);
-
-document.body.insertAdjacentHTML('afterbegin', '<nav>' +
+  document.body.insertAdjacentHTML('afterbegin', '<nav>' +
     '<a href="' + B + '/" class="logo" style="display:flex;align-items:center;gap:0.7rem;text-decoration:none;">' +
       '<img src="' + B + '/cms-logo.png" alt="CMS Logo" style="height:42px;width:auto;display:block;">' +
-      '<span style="font-family:Cormorant Garamond,Georgia,serif;font-size:1.9rem;font-weight:300;color:#1a3f6f;line-height:1;letter-spacing:0.04em;white-space:nowrap;">Conner Marketing Solutions</span>' +
+      '<span style="font-family:Playfair Display,serif;font-size:1.55rem;font-weight:400;color:#1a3f6f;line-height:1;letter-spacing:-0.04em;white-space:nowrap;">Conner Marketing Solutions</span>' +
     '</a>' +
     '<ul>' +
       '<li><a href="' + B + '/" class="' + a(B + '/') + '">Home</a></li>' +
