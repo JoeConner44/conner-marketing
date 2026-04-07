@@ -1,5 +1,5 @@
 (function () {
-  var B = '/conner-marketing';
+  var B = '';
   var p = window.location.pathname;
 
   function a(href) {
