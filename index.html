@@ -75,86 +75,80 @@
 (function(){
   var strip = document.getElementById('marquee');
   var track = document.getElementById('marquee-track');
-  var speed = 0.6;
   var pos = 0;
+  var halfW;
+  var speed = 0.6;
+  var hovering = false;
+  var isDrag = false;
   var dragging = false;
   var startX = 0;
   var startPos = 0;
-  var velocity = 0;
-  var lastX = 0;
-  var lastTime = 0;
-  var raf;
-  var halfW;
-  var isDrag = false;
 
   function getHalfW(){ halfW = track.scrollWidth / 2; }
   getHalfW();
+  window.addEventListener('resize', getHalfW);
 
   function tick(){
-    if(!dragging){
-      velocity *= 0.95;
-      pos -= (speed + Math.abs(velocity)) * Math.sign(speed + velocity || speed);
-    }
+    pos -= speed;
     if(pos <= -halfW) pos += halfW;
     if(pos > 0) pos -= halfW;
     track.style.transform = 'translateX(' + pos + 'px)';
-    raf = requestAnimationFrame(tick);
+    requestAnimationFrame(tick);
   }
-  raf = requestAnimationFrame(tick);
+  requestAnimationFrame(tick);
 
+  // Hover = cursor position controls speed & direction
+  strip.addEventListener('mousemove', function(e){
+    if(dragging) return;
+    var rect = strip.getBoundingClientRect();
+    var relX = e.clientX - rect.left;
+    var pct = relX / rect.width; // 0 = far left, 1 = far right
+    // Center (0.5) = paused, left = reverse, right = forward
+    speed = (pct - 0.5) * 4;
+  });
+
+  strip.addEventListener('mouseleave', function(){
+    if(!dragging) speed = 0.6;
+  });
+
+  // Drag still works for finer control
   strip.addEventListener('mousedown', function(e){
     dragging = true; isDrag = false;
     startX = e.clientX; startPos = pos;
-    lastX = e.clientX; lastTime = Date.now();
-    velocity = 0;
-    cancelAnimationFrame(raf);
-    raf = requestAnimationFrame(tick);
+    strip.style.cursor = 'grabbing';
   });
 
   window.addEventListener('mousemove', function(e){
     if(!dragging) return;
     var dx = e.clientX - startX;
     if(Math.abs(dx) > 4) isDrag = true;
-    var now = Date.now();
-    velocity = (e.clientX - lastX) / Math.max(1, now - lastTime) * 16;
-    lastX = e.clientX; lastTime = now;
     pos = startPos + dx;
   });
 
-  window.addEventListener('mouseup', function(e){
+  window.addEventListener('mouseup', function(){
     if(!dragging) return;
     dragging = false;
-    speed = -velocity * 0.4 || 0.6;
-    if(speed === 0) speed = 0.6;
+    strip.style.cursor = 'grab';
+    // Resume hover-based speed
+    speed = 0.6;
   });
 
   strip.addEventListener('click', function(e){
-    if(isDrag){ e.preventDefault(); }
+    if(isDrag) e.preventDefault();
   }, true);
 
+  // Touch
   strip.addEventListener('touchstart', function(e){
     dragging = true; isDrag = false;
     startX = e.touches[0].clientX; startPos = pos;
-    lastX = startX; lastTime = Date.now(); velocity = 0;
   },{passive:true});
-
   strip.addEventListener('touchmove', function(e){
     if(!dragging) return;
     var dx = e.touches[0].clientX - startX;
     if(Math.abs(dx) > 4) isDrag = true;
-    var now = Date.now();
-    velocity = (e.touches[0].clientX - lastX) / Math.max(1, now - lastTime) * 16;
-    lastX = e.touches[0].clientX; lastTime = now;
     pos = startPos + dx;
   },{passive:true});
-
-  strip.addEventListener('touchend', function(){
-    dragging = false;
-    speed = -velocity * 0.4 || 0.6;
-    if(speed === 0) speed = 0.6;
-  });
-
-  window.addEventListener('resize', getHalfW);
+  strip.addEventListener('touchend', function(){ dragging = false; speed = 0.6; });
 })();
 </script></div>
 
