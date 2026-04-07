@@ -40,7 +40,8 @@
       <div class="form-group"><label for="bz">Business Name</label><input type="text" id="bz" placeholder="Your Business"></div>
       <div class="form-group"><label for="sv">Service Interest</label><select id="sv"><option value="" disabled selected>Select a service…</option><option>Web Design &amp; Development</option><option>Local SEO</option><option>Social Media Marketing</option><option>Digital Advertising</option><option>Promotional Marketing</option><option>Website Hosting</option><option>Multiple Services</option><option>Not Sure Yet</option></select></div>
       <div class="form-group"><label for="msg">Tell Us About Your Business</label><textarea id="msg" placeholder="What are your main marketing goals?"></textarea></div>
-      <button class="submit-btn" onclick="handleSubmit(this)">Send Free Quote Request →</button>
+      <button class="submit-btn" id="submit-btn" onclick="submitForm(this)">Send Free Quote Request →</button>
+      <p id="form-msg" style="text-align:center;margin-top:1rem;font-size:.875rem;display:none;"></p>
     </div>
   </div>
 </section>
@@ -74,6 +75,69 @@
     if(ta) ta.value = decodeURIComponent(msg);
   }
 })();
+</script>
+<script>
+function submitForm(btn) {
+  // Grab values
+  var firstName = document.getElementById('fn').value.trim();
+  var lastName  = document.getElementById('ln').value.trim();
+  var email     = document.getElementById('em').value.trim();
+  var phone     = document.getElementById('ph').value.trim();
+  var business  = document.getElementById('bz').value.trim();
+  var service   = document.getElementById('sv').value;
+  var message   = document.getElementById('msg').value.trim();
+  var msgEl     = document.getElementById('form-msg');
+
+  // Basic validation
+  if(!firstName || !email) {
+    msgEl.style.display = 'block';
+    msgEl.style.color = '#c0392b';
+    msgEl.textContent = 'Please fill in your first name and email address.';
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+  btn.style.background = '#2a5fa8';
+  msgEl.style.display = 'none';
+
+  var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxTyy94WZxbSrlslsEggjfbLtnYuFPD4QL__ZTsAJ4Ilc2v7TDdolSWR3obngXcFtjN/exec';
+
+  fetch(SCRIPT_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      firstName: firstName,
+      lastName:  lastName,
+      email:     email,
+      phone:     phone,
+      business:  business,
+      service:   service,
+      message:   message
+    })
+  })
+  .then(function() {
+    btn.textContent = '✓ Message Sent!';
+    btn.style.background = '#1a5c3a';
+    msgEl.style.display = 'block';
+    msgEl.style.color = '#1a5c3a';
+    msgEl.textContent = "Thanks! We'll be in touch within one business day.";
+    // Clear form
+    ['fn','ln','em','ph','bz','msg'].forEach(function(id){
+      document.getElementById(id).value = '';
+    });
+    document.getElementById('sv').selectedIndex = 0;
+  })
+  .catch(function(err) {
+    btn.disabled = false;
+    btn.textContent = 'Send Free Quote Request →';
+    btn.style.background = '';
+    msgEl.style.display = 'block';
+    msgEl.style.color = '#c0392b';
+    msgEl.textContent = 'Something went wrong. Please try again or call (770) 778-9877.';
+  });
+}
 </script>
 <script src="/nav.js"></script>
 </body>
