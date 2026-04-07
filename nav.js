@@ -15,7 +15,7 @@
   document.body.insertAdjacentHTML('afterbegin', '<nav>' +
     '<a href="' + B + '/" class="logo" style="display:flex;align-items:center;gap:0.7rem;text-decoration:none;">' +
       '<img src="' + B + '/cms-logo.png" alt="CMS Logo" style="height:42px;width:auto;display:block;">' +
-      '<span style="font-family:Georgia,Times New Roman,serif;font-size:0.82rem;font-weight:700;color:#0d1b2e;line-height:1.3;letter-spacing:0.01em;">Conner<br>Marketing<br>Solutions</span>' +
+      '<span style="font-family:Georgia,Times New Roman,serif;font-size:1.65rem;font-weight:400;color:#0d1b2e;line-height:1;letter-spacing:0.01em;white-space:nowrap;">Conner Marketing Solutions</span>' +
     '</a>' +
     '<ul>' +
       '<li><a href="' + B + '/" class="' + a(B + '/') + '">Home</a></li>' +
