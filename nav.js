@@ -67,7 +67,11 @@
       '</div>' +
       '<div class="footer-bottom">' +
         '<p>&copy; ' + new Date().getFullYear() + ' Conner Marketing Solutions. All rights reserved.</p>' +
-        '<p>Designed &amp; built by CMS.</p>' +
+        '<div style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap;justify-content:center;">' +
+          '<a href="/terms/" style="color:rgba(255,255,255,.35);font-size:.78rem;text-decoration:none;transition:color .2s;" onmouseover="this.style.color=\'rgba(255,255,255,.8)\'" onmouseout="this.style.color=\'rgba(255,255,255,.35)\'">Terms &amp; Conditions</a>' +
+          '<a href="/privacy/" style="color:rgba(255,255,255,.35);font-size:.78rem;text-decoration:none;transition:color .2s;" onmouseover="this.style.color=\'rgba(255,255,255,.8)\'" onmouseout="this.style.color=\'rgba(255,255,255,.35)\'">Privacy Policy</a>' +
+          '<span style="color:rgba(255,255,255,.28);font-size:.78rem;">Designed &amp; built by CMS.</span>' +
+        '</div>' +
       '</div>' +
     '</footer>'
   );
