@@ -82,10 +82,12 @@ nav ul li > a:hover, nav ul li > a.active { color: var(--navy); background: var(
 .stat-card.tertiary .mini-val { color: var(--white); }
 
 /* MARQUEE */
-.marquee-strip { background: var(--navy); padding: 0.9rem 0; overflow: hidden; white-space: nowrap; }
-.marquee-inner { display: inline-flex; animation: marquee 26s linear infinite; }
-.marquee-inner span { font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.8); padding: 0 2.5rem; }
-.marquee-inner span.dot { color: rgba(255,255,255,0.25); padding: 0; }
+.marquee-strip { background: var(--navy); padding: 0; overflow: hidden; cursor: grab; user-select: none; position: relative; }
+.marquee-strip:active { cursor: grabbing; }
+.marquee-track { display: flex; width: max-content; will-change: transform; }
+.marquee-item { display: inline-flex; align-items: center; gap: 0.75rem; padding: 0.9rem 2.5rem; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.8); text-decoration: none; white-space: nowrap; transition: color 0.2s, background 0.2s; flex-shrink: 0; }
+.marquee-item:hover { color: var(--white); background: rgba(255,255,255,0.08); }
+.marquee-item .dot { color: rgba(255,255,255,0.25); font-size: 0.6rem; pointer-events: none; }
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
 /* SECTION LABELS & HEADINGS */
