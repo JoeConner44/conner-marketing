@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://connermarketing.com/sitemap.xml
