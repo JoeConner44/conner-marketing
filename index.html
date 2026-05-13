@@ -58,7 +58,7 @@
 .audit-list li::before{content:'✓';color:rgba(255,255,255,.5);font-weight:700}
 
 /* PORTFOLIO */
-.port-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3rem}
+.port-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
 .port-card{border-radius:1.25rem;overflow:hidden;background:var(--warm-mid);position:relative;aspect-ratio:16/9;transition:transform .25s}
 .port-card:hover{transform:translateY(-4px)}
 .port-card img{width:100%;height:100%;object-fit:cover;display:block}
@@ -259,6 +259,10 @@
     <div class="port-card scroll-reveal">
       <img src="/images/insquotehub.png" alt="Insurance Quote Hub" onerror="this.style.background='#dce6f0'">
       <div class="port-overlay"><h3>Insurance Quote Hub</h3><a href="https://insquotehub.com/" target="_blank" rel="noopener">insquotehub.com ↗</a></div>
+    </div>
+    <div class="port-card scroll-reveal">
+      <img src="/images/atharental.png" alt="Atha Rental" onerror="this.style.background='#dce6f0'">
+      <div class="port-overlay"><h3>Atha Rental</h3><a href="https://atharental.com/" target="_blank" rel="noopener">atharental.com ↗</a></div>
     </div>
   </div>
   <div style="text-align:center;margin-top:2.5rem;">
