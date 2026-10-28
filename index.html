@@ -3,354 +3,135 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Conner Marketing Solutions builds websites for Georgia contractors, plumbers, and HVAC companies that rank on Google and generate real leads. Get a free website audit today.">
-<title>Conner Marketing Solutions | Websites That Win Customers for Georgia Contractors</title>
+<title>Conner Marketing Solutions | Websites for Georgia Service Businesses</title>
+<meta name="description" content="We design, build and host websites for Georgia plumbers, HVAC companies and other service businesses, then do the local SEO that gets them found. Free website audit.">
+<link rel="canonical" href="https://connermarketing.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Conner Marketing Solutions">
+<meta property="og:title" content="Conner Marketing Solutions | Websites for Georgia Service Businesses">
+<meta property="og:description" content="We design, build and host websites for Georgia plumbers, HVAC companies and other service businesses, then do the local SEO that gets them found. Free website audit.">
+<meta property="og:url" content="https://connermarketing.com/">
+<meta property="og:image" content="https://connermarketing.com/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Conner Marketing Solutions | Websites for Georgia Service Businesses">
+<meta name="twitter:description" content="We design, build and host websites for Georgia plumbers, HVAC companies and other service businesses, then do the local SEO that gets them found. Free website audit.">
+<meta name="twitter:image" content="https://connermarketing.com/images/og-image.png">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="preload" href="/fonts/dm-sans-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/playfair-display-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="/images/state-mechanical-1440.webp" type="image/webp">
 <link rel="stylesheet" href="/style.css">
-<style>
-/* HERO */
-.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8rem 4rem 5rem;background:var(--navy-dark);position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:-20%;right:-5%;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(42,95,168,.35) 0%,transparent 65%);pointer-events:none}
-.hero::after{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:32px 32px;pointer-events:none}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.73rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:1.5rem;position:relative;z-index:2}
-.hero-eyebrow::before{content:'';display:block;width:24px;height:1px;background:rgba(255,255,255,.3)}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5.5vw,4.8rem);line-height:1.06;font-weight:700;letter-spacing:-.025em;color:var(--white);margin-bottom:1.5rem;position:relative;z-index:2;max-width:900px}
-.hero h1 em{font-style:italic;color:rgba(255,255,255,.55)}
-.hero-sub{font-size:1.1rem;color:rgba(255,255,255,.6);font-weight:300;line-height:1.8;max-width:580px;margin-bottom:1rem;position:relative;z-index:2}
-.hero-proof{font-size:.82rem;color:rgba(255,255,255,.35);margin-bottom:2.5rem;position:relative;z-index:2;letter-spacing:.04em}
-.hero .btn-group{position:relative;z-index:2;justify-content:center}
-.hero-audit-note{font-size:.78rem;color:rgba(255,255,255,.3);margin-top:1rem;position:relative;z-index:2}
-
-/* TRUST BAR */
-.trust-bar{background:rgba(255,255,255,.04);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);padding:1.5rem 4rem;display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap;background:var(--navy-dark)}
-.trust-item{display:flex;align-items:center;gap:.6rem;color:rgba(255,255,255,.5);font-size:.82rem;letter-spacing:.04em}
-.trust-item svg{flex-shrink:0;opacity:.6}
-
-/* PAIN SECTION */
-.pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
-.pain-card{background:var(--white);border-radius:1.25rem;padding:2rem 1.75rem;border:1px solid var(--warm-mid);position:relative;overflow:hidden}
-.pain-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--navy)}
-.pain-card .pain-icon{width:48px;height:48px;background:var(--cream);border-radius:.75rem;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;}
-.pain-card h3{font-size:1.05rem;margin-bottom:.6rem;color:var(--text-dark)}
-.pain-card p{font-size:.875rem;color:var(--text-muted);font-weight:300;line-height:1.7}
-.pain-callout{background:var(--navy-dark);border-radius:1.25rem;padding:2.5rem;text-align:center;margin-top:2rem}
-.pain-callout p{color:rgba(255,255,255,.7);font-size:1.05rem;font-weight:300;line-height:1.7;max-width:640px;margin:0 auto 1.75rem}
-
-/* SERVICES */
-.services-intro{display:grid;grid-template-columns:1fr 1fr;align-items:end;gap:2rem;margin-bottom:3.5rem}
-.services-intro p{color:var(--text-muted);font-weight:300;max-width:380px;justify-self:end}
-
-/* HOW IT WORKS */
-.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem;counter-reset:step-counter}
-.how-card{background:rgba(255,255,255,.06);border-radius:1.25rem;padding:2.25rem 2rem;position:relative;border:1px solid rgba(255,255,255,.08)}
-.how-num{font-family:'Playfair Display',serif;font-size:3rem;font-weight:700;color:rgba(255,255,255,.12);line-height:1;margin-bottom:.5rem}
-.how-card h3{font-size:1.1rem;color:var(--white);margin-bottom:.75rem}
-.how-card p{font-size:.875rem;color:rgba(255,255,255,.55);font-weight:300;line-height:1.7}
-
-/* AUDIT CTA STRIP */
-.audit-strip{background:var(--navy);padding:5rem 4rem;text-align:center;position:relative;overflow:hidden}
-.audit-strip::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.03) 1px,transparent 1px);background-size:28px 28px}
-.audit-strip h2{color:var(--white);max-width:640px;margin:0 auto 1rem;position:relative;z-index:2}
-.audit-strip h2 em{color:rgba(255,255,255,.55);font-style:italic}
-.audit-strip p{color:rgba(255,255,255,.55);max-width:480px;margin:0 auto 2.5rem;font-weight:300;position:relative;z-index:2}
-.audit-list{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.5rem;position:relative;z-index:1}
-.audit-list li{list-style:none;color:rgba(255,255,255,.7);font-size:.875rem;display:flex;align-items:center;gap:.5rem;position:relative;z-index:1}
-.audit-list li::before{content:'✓';color:rgba(255,255,255,.5);font-weight:700}
-
-/* PORTFOLIO */
-.port-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
-.port-card{border-radius:1.25rem;overflow:hidden;background:var(--warm-mid);position:relative;aspect-ratio:16/9;transition:transform .25s}
-.port-card:hover{transform:translateY(-4px)}
-.port-card img{width:100%;height:100%;object-fit:cover;display:block}
-.port-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(13,27,46,.88) 0%,transparent 55%);display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem;opacity:0;transition:opacity .3s}
-.port-card:hover .port-overlay{opacity:1}
-.port-overlay h3{color:var(--white);font-size:1.05rem;margin-bottom:.25rem}
-.port-overlay a{color:rgba(255,255,255,.7);font-size:.8rem;text-decoration:none}
-
-/* WHY */
-.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3.5rem}
-.why-item{padding:2rem 0;border-top:1px solid rgba(255,255,255,.12)}
-.why-num{font-family:'Playfair Display',serif;font-size:3.5rem;font-weight:700;color:rgba(255,255,255,.06);line-height:1;margin-bottom:-.75rem}
-.why-item h3{font-size:1.05rem;color:var(--white);margin-bottom:.6rem}
-.why-item p{font-size:.875rem;color:rgba(255,255,255,.55);font-weight:300;line-height:1.7}
-
-/* FINAL CTA */
-.final-cta{background:var(--navy-dark);padding:7rem 4rem;text-align:center;position:relative;overflow:hidden}
-.final-cta::before{content:'';position:absolute;bottom:-30%;left:50%;transform:translateX(-50%);width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(42,95,168,.25) 0%,transparent 65%);pointer-events:none}
-.final-cta h2{color:var(--white);max-width:680px;margin:0 auto 1rem;font-size:clamp(2rem,4vw,3.2rem);position:relative;z-index:1}
-.final-cta h2 em{font-style:italic;color:rgba(255,255,255,.5)}
-.final-cta p{color:rgba(255,255,255,.5);max-width:480px;margin:0 auto 2.5rem;font-weight:300;font-size:1.05rem;position:relative;z-index:1}
-.final-cta .btn-group{justify-content:center;position:relative;z-index:1}
-.final-cta-note{font-size:.78rem;color:rgba(255,255,255,.25);margin-top:1rem;position:relative;z-index:1}
-
-@media(max-width:960px){
-  .hero{padding:7rem 1.5rem 3rem}
-  .trust-bar{padding:1.25rem 1.5rem;gap:1.25rem}
-  .pain-grid,.how-grid,.services-intro,.port-grid,.why-grid{grid-template-columns:1fr}
-  .services-intro p{justify-self:start}
-  .audit-strip,.final-cta{padding:4rem 1.5rem}
-  .audit-list{flex-direction:column;align-items:center;gap:1rem}
-}
-</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Conner Marketing Solutions", "url": "https://connermarketing.com/", "image": "https://connermarketing.com/images/og-image.png", "logo": "https://connermarketing.com/cms-logo-168.png", "telephone": "+1-770-778-9877", "email": "info@connermarketing.com", "priceRange": "$$", "address": {"@type": "PostalAddress", "streetAddress": "52 Charlotte Circle", "addressLocality": "Statham", "addressRegion": "GA", "postalCode": "30666", "addressCountry": "US"}, "areaServed": {"@type": "State", "name": "Georgia"}}</script>
 </head>
 <body>
-
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-eyebrow fade-up">Specializing in Service Businesses Across Georgia</div>
-  <h1 class="fade-up delay-1">Grow your business,<br><em>not your problems.</em></h1>
-  <p class="hero-sub fade-up delay-2">We build fast, professional websites for local service businesses — then get them ranking on Google so the phone actually rings.</p>
-  <p class="hero-proof fade-up delay-2">Big agency results. Without the big agency price tag.</p>
-  <div class="btn-group fade-up delay-3">
-    <a href="/contact/?service=Free+Website+Audit&msg=I%27d+like+a+free+audit+of+my+current+website+and+online+presence." class="btn-primary" style="font-size:1rem;padding:1rem 2.25rem;">Get My Free Website Audit →</a>
+<main id="main">
+<div class="hero on-dark glow">
+<div>
+  <span class="eyebrow">Web design for Georgia service businesses</span>
+  <h1>Grow your business, <span class="accent">not your problems.</span></h1>
+  <p class="lead">We design, build and host websites for plumbers, HVAC companies and other service businesses in Georgia, then do the local SEO work that gets them found. Sites launch in two to four weeks.</p>
+  <p class="hero-note">Senior-level work from a small Georgia team. You talk to the person building your site.</p>
+  <div class="btn-group fade-up d1"><a href="/free-audit/" class="btn" data-track="audit_cta_hero">Get a Free Website Audit</a><a href="tel:7707789877" class="btn-text">Or call (770) 778-9877</a></div>
+  <p class="hero-small">Free. No obligation. Back to you within 24 hours.</p>
+</div>
+<div><div class="frame" style="border-color:rgba(255,255,255,.2)">
+<div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>statemechanicalga.com</span></div>
+<div class="ba">
+  <div class="ba-new"><img src="/images/state-mechanical-1440.webp" srcset="/images/state-mechanical-720.webp 720w, /images/state-mechanical-1440.webp 1440w" sizes="(min-width:1024px) 560px, 100vw" width="1440" height="663" alt="State Mechanical Heating &amp; Air website, built by CMS" fetchpriority="high"></div>
+  <div class="ba-old" aria-hidden="true">
+    <div class="o-bar">Welcome To Our Website!!</div>
+    <div class="o-links">Home | About Us | Services | Links | Guestbook | Contact</div>
+    <div class="o-body"><h4>HEATING &amp; AIR</h4><p>We have been in business for many years. Call us for all of your needs. Best viewed in Internet Explorer.</p><div class="o-box">Call for a free estimate!</div></div>
+    <div class="o-count">You are visitor number 004,512</div>
   </div>
-  <p class="hero-audit-note fade-up delay-3">Free. No obligation. Takes less than 24 hours.</p>
+  <span class="ba-tag l" aria-hidden="true">Before (typical)</span><span class="ba-tag r" aria-hidden="true">After</span>
+  <input type="range" min="5" max="95" value="50" aria-label="Drag to compare a typical outdated site with the finished State Mechanical site">
+  <div class="ba-handle" aria-hidden="true"></div>
+</div></div>
+<p class="ba-caption">Drag to compare. Left is an illustration of a typical outdated site. Right is State Mechanical, built by CMS.</p></div>
 </div>
 
-<!-- TRUST BAR -->
-<div class="trust-bar">
-  <div class="trust-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1l1.8 3.6L14 5.3l-3 2.9.7 4.1L8 10.4l-3.7 1.9.7-4.1-3-2.9 4.2-.7z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>Georgia-Based Team</div>
-  <div class="trust-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.2"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Sites Live in 2–4 Weeks</div>
-  <div class="trust-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2C5.2 2 3 4.2 3 7c0 3.5 5 7 5 7s5-3.5 5-7c0-2.8-2.2-5-5-5z" stroke="currentColor" stroke-width="1.2"/><circle cx="8" cy="7" r="1.5" stroke="currentColor" stroke-width="1.2"/></svg>Serving All of Georgia</div>
-  <div class="trust-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="8" rx="1" stroke="currentColor" stroke-width="1.2"/><path d="M5 11v2M11 11v2M3 13h10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Built to Rank on Google</div>
-  <div class="trust-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4l6 4 6-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><rect x="2" y="3" width="12" height="9" rx="1" stroke="currentColor" stroke-width="1.2"/></svg>Real Person. Real Support.</div>
+<div class="proof">
+<!-- TODO: swap in real numbers when ready (sites launched, years in business, average build time in days) -->
+<ul>
+<li><strong>Statham, GA</strong>Local, same time zone</li>
+<li><strong>2 to 4 weeks</strong>From kickoff to launch</li>
+<li><strong>24 hours</strong>Free audit turnaround</li>
+<li><strong>You own it</strong>Site, domain and content</li>
+</ul></div>
+
+<section class="s-tint"><div class="wrap">
+<span class="eyebrow">Sound familiar?</span>
+<h2>Four reasons your website isn't bringing in work</h2>
+<ul class="pain-list">
+<li><h3>It looks outdated</h3><p>Customers judge your work by your site. If it looks old, they call the next plumber on the list.</p></li>
+<li><h3>You don't show up on Google</h3><p>Searches like &ldquo;HVAC repair near me&rdquo; go to whoever is in the map pack. If that isn't you, those calls go to someone else.</p></li>
+<li><h3>It's hard to use on a phone</h3><p>Most local searches happen on a phone. If the number is hard to tap or the page jumps around, people leave.</p></li>
+<li><h3>You can't tell what's working</h3><p>If you don't know which calls and form fills came from the site, you're guessing. We set up tracking so you can see it.</p></li>
+</ul>
+<p class="pain-end">Not sure which of these is costing you the most? <a href="/free-audit/">Get a free audit</a> and we'll tell you.</p>
+</div></section>
+
+<section class="s-deep on-dark glow"><div class="wrap">
+<h2>How a project runs</h2>
+<ol class="steps">
+<li class="step"><div class="badge">1</div><h3>Free website audit</h3><p>We review your site, your Google presence and your local competition. You get a plain-English list of what to fix.</p></li>
+<li class="step"><div class="badge">2</div><h3>We build and launch</h3><p>If you move forward, your new site is live in two to four weeks. You approve everything before it goes out.</p></li>
+<li class="step"><div class="badge">3</div><h3>We get you found</h3><p>Google Business Profile, citations and rank tracking. Most clients see movement inside 90 days.</p></li>
+</ol></div></section>
+
+<section class="s-white"><div class="wrap">
+<h2>What we do</h2>
+<p class="lead">One team for your website, your marketing and the software behind your sales.</p>
+<div class="svc-grid"><a class="svc-card" href="/services/web-design/"><svg viewBox="0 0 44 44" aria-hidden="true"><path fill-rule="evenodd" d="M8 6h28a3 3 0 013 3v26a3 3 0 01-3 3H8a3 3 0 01-3-3V9a3 3 0 013-3zm0 9v20h28V15z"/><rect x="10" y="20" width="14" height="4" rx="1"/><rect x="10" y="27" width="22" height="4" rx="1"/></svg><h3>Website Design &amp; Development</h3><p>A fast, custom site built to bring in calls and form fills. Hosting, support and local SEO are included.</p><span class="more">Learn more</span></a><a class="svc-card" href="/services/social-media/"><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M6 9a3 3 0 013-3h26a3 3 0 013 3v19a3 3 0 01-3 3H20l-9 8v-8H9a3 3 0 01-3-3z"/></svg><h3>Social Media</h3><p>We plan, write and post for Facebook and Instagram so your page stays active without you.</p><span class="more">Learn more</span></a><a class="svc-card" href="/services/digital-advertising/"><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M37 5v34l-19-9H9a3 3 0 01-3-3V17a3 3 0 013-3h9z"/><path d="M12 31h6l2 9h-6z"/></svg><h3>Ad Management</h3><p>Google and Meta ads that reach homeowners who are ready to hire, managed month to month.</p><span class="more">Learn more</span></a><a class="svc-card" href="/services/sales-software/"><svg viewBox="0 0 44 44" aria-hidden="true"><rect x="5" y="5" width="15" height="19" rx="3"/><rect x="24" y="5" width="15" height="11" rx="3"/><rect x="5" y="28" width="15" height="11" rx="3"/><rect x="24" y="20" width="15" height="19" rx="3"/></svg><h3>Custom Sales Software</h3><p>Quoting tools, lead tracking and dispatch boards built around how your team sells.</p><span class="more">Learn more</span></a></div>
+<p class="svc-note">Website projects include hosting, support and local SEO.</p>
+</div></section>
+
+<section class="s-tint"><div class="wrap">
+<h2>Recent work</h2>
+<div class="work-grid">
+<article class="work">
+<div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>statemechanicalga.com</span></div><img src="/images/state-mechanical-1440.webp" srcset="/images/state-mechanical-720.webp 720w, /images/state-mechanical-1440.webp 1440w" sizes="(min-width:1024px) 1100px, 100vw" width="1440" height="663" alt="State Mechanical Heating &amp; Air website" loading="lazy" decoding="async"></div>
+<div class="work-meta"><div><h3>State Mechanical Heating &amp; Air</h3><p>Full website design and development for a Walton County HVAC company. Built to generate service calls and rank locally.</p>
+<ul class="tags"><li>Web Design</li><li>Development</li><li>Local SEO</li></ul></div>
+<a href="http://statemechanicalga.com/" target="_blank" rel="noopener">Visit site<span class="sr-only"> (opens in a new tab)</span> &#8599;</a></div>
+</article>
+<article class="work">
+<div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>insquotehub.com</span></div><img src="/images/insquotehub-1440.webp" srcset="/images/insquotehub-720.webp 720w, /images/insquotehub-1440.webp 1440w" sizes="(min-width:1024px) 540px, 100vw" width="1440" height="636" alt="Insurance Quote Hub website" loading="lazy" decoding="async"></div>
+<div class="work-meta"><div><h3>Insurance Quote Hub</h3><p>Lead generation website for an insurance comparison platform. Conversion-focused design with fast load times.</p>
+<ul class="tags"><li>Web Design</li><li>Development</li><li>Lead Generation</li></ul></div>
+<a href="https://insquotehub.com/" target="_blank" rel="noopener">Visit site<span class="sr-only"> (opens in a new tab)</span> &#8599;</a></div>
+</article>
+<article class="work">
+<div class="frame"><div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>atharental.com</span></div><img src="/images/atharental-1440.webp" srcset="/images/atharental-720.webp 720w, /images/atharental-1440.webp 1440w" sizes="(min-width:1024px) 540px, 100vw" width="1440" height="668" alt="Atha Rental website" loading="lazy" decoding="async"></div>
+<div class="work-meta"><div><h3>Atha Rental</h3><p>Full website design and development for a Monroe, Georgia equipment rental company: dumpsters, portable toilets and heavy equipment. Family owned since 2003.</p>
+<ul class="tags"><li>Web Design</li><li>Development</li><li>Local SEO</li></ul></div>
+<a href="https://atharental.com/" target="_blank" rel="noopener">Visit site<span class="sr-only"> (opens in a new tab)</span> &#8599;</a></div>
+</article>
 </div>
+<div class="btn-group"><a href="/portfolio/" class="btn-outline">See all projects</a></div>
+</div></section>
 
-<!-- MARQUEE -->
-<div class="marquee-strip" id="marquee" aria-label="Services navigation">
-  <div class="marquee-track" id="marquee-track">
-    <a href="/services/web-design/" class="marquee-item">Web Design &amp; Development<span class="dot">◆</span></a>
-    <a href="/services/local-seo/" class="marquee-item">Local SEO<span class="dot">◆</span></a>
-    <a href="/services/hosting/" class="marquee-item">Website Hosting<span class="dot">◆</span></a>
-    <a href="/services/digital-advertising/" class="marquee-item">Digital Advertising<span class="dot">◆</span></a>
-    <a href="/services/social-media/" class="marquee-item">Social Media Marketing<span class="dot">◆</span></a>
-    <a href="/services/promotional/" class="marquee-item">Promotional Marketing<span class="dot">◆</span></a>
-    <a href="/services/web-design/" class="marquee-item">Web Design &amp; Development<span class="dot">◆</span></a>
-    <a href="/services/local-seo/" class="marquee-item">Local SEO<span class="dot">◆</span></a>
-    <a href="/services/hosting/" class="marquee-item">Website Hosting<span class="dot">◆</span></a>
-    <a href="/services/digital-advertising/" class="marquee-item">Digital Advertising<span class="dot">◆</span></a>
-    <a href="/services/social-media/" class="marquee-item">Social Media Marketing<span class="dot">◆</span></a>
-    <a href="/services/promotional/" class="marquee-item">Promotional Marketing<span class="dot">◆</span></a>
-  </div>
+<section class="s-deep on-dark glow"><div class="wrap">
+<span class="eyebrow">Why businesses pick us</span>
+<h2>You work with the people building your site</h2>
+<!-- TODO: add one real result number to the case strip (e.g. ranking change, calls per month, weeks to launch) -->
+<div class="case">
+<div><h3>State Mechanical Heating &amp; Air</h3><p>Walton County HVAC</p></div>
+<p>A new custom site built for service calls, plus Google Business Profile and local SEO work to get the company found in its own backyard.</p>
+<a href="/portfolio/" class="btn-text">See the project</a>
 </div>
+<p style="margin-top:2rem;max-width:62ch;">No outsourcing and no hand-offs to junior staff. You own your website, your domain and your content, so you are never locked in.</p>
+</div></section>
 
-<!-- PAIN POINTS -->
-<section class="section-cream">
-  <div class="section-label">Sound Familiar?</div>
-  <h2>Why most service business websites<br><em>don't generate leads</em></h2>
-  <div class="pain-grid">
-    <div class="pain-card scroll-reveal">
-      <span class="pain-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="5" width="22" height="15" rx="1.5" stroke="#1a3f6f" stroke-width="1.25"/><path d="M3 15h22" stroke="#1a3f6f" stroke-width="1.25"/><path d="M10 23h8M14 20v3" stroke="#1a3f6f" stroke-width="1.25" stroke-linecap="round"/><path d="M7 12l4-4 3 3 5-5" stroke="#1a3f6f" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      <h3>"My website looks outdated"</h3>
-      <p>First impressions happen in under 3 seconds. If your site looks old, customers assume your work does too — and they call someone else.</p>
-    </div>
-    <div class="pain-card scroll-reveal">
-      <span class="pain-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="12" cy="12" r="7" stroke="#1a3f6f" stroke-width="1.25"/><path d="M12 8v4M12 16v.5" stroke="#1a3f6f" stroke-width="1.25" stroke-linecap="round"/><path d="M17 17l4.5 4.5" stroke="#1a3f6f" stroke-width="1.25" stroke-linecap="round"/></svg></span>
-      <h3>"I can't be found on Google"</h3>
-      <p>If you're not on the first page for searches like "plumber near me" or "HVAC repair Georgia," you're invisible to the customers who matter most.</p>
-    </div>
-    <div class="pain-card scroll-reveal">
-      <span class="pain-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="8" y="3" width="12" height="22" rx="2" stroke="#1a3f6f" stroke-width="1.25"/><path d="M8 7h12M8 21h12" stroke="#1a3f6f" stroke-width="1.25"/><circle cx="14" cy="23.5" r="0.75" fill="#1a3f6f"/></svg></span>
-      <h3>"My site doesn't work on phones"</h3>
-      <p>Over 70% of local service searches happen on mobile. A site that's hard to use on a phone loses customers before they ever call.</p>
-    </div>
-    <div class="pain-card scroll-reveal">
-      <span class="pain-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="9" stroke="#1a3f6f" stroke-width="1.25"/><path d="M14 8v6l3.5 3.5" stroke="#1a3f6f" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      <h3>"It loads too slow"</h3>
-      <p>53% of visitors leave a site that takes more than 3 seconds to load. Slow sites also rank lower on Google — a double loss.</p>
-    </div>
-    <div class="pain-card scroll-reveal">
-      <span class="pain-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="8" width="22" height="14" rx="1.5" stroke="#1a3f6f" stroke-width="1.25"/><circle cx="14" cy="15" r="3" stroke="#1a3f6f" stroke-width="1.25"/><path d="M3 12h22" stroke="#1a3f6f" stroke-width="1.25"/></svg></span>
-      <h3>"I'm paying too much for too little"</h3>
-      <p>Big agencies charge big agency prices and hand you off to junior staff. You deserve senior-level work and someone who actually picks up the phone.</p>
-    </div>
-    <div class="pain-card scroll-reveal">
-      <span class="pain-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M5 22l4-8 5 4 4-6 5 3" stroke="#1a3f6f" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 6h18M5 10h12" stroke="#1a3f6f" stroke-width="1.25" stroke-linecap="round"/></svg></span>
-      <h3>"I don't know what's working"</h3>
-      <p>If you can't tell where your leads are coming from, you're flying blind. Your website should be your hardest-working salesperson — trackable and measurable.</p>
-    </div>
-  </div>
-  <div class="pain-callout scroll-reveal">
-    <p>If any of these sound familiar, your website is costing you customers right now. A free audit from CMS shows you exactly what's broken — and how to fix it.</p>
-    <a href="/contact/?service=Free+Website+Audit&msg=I%27d+like+a+free+audit+of+my+current+website+and+online+presence." class="btn-primary" style="background:var(--white);color:var(--navy-dark);display:inline-flex;align-items:center;gap:.5rem;">Get My Free Audit →</a>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section class="section-navy">
-  <div class="section-label">How It Works</div>
-  <h2>From audit to leads<br>in <em>weeks, not months</em></h2>
-  <div class="how-grid">
-    <div class="how-card scroll-reveal">
-      <div class="how-num">01</div>
-      <h3>Free Website Audit</h3>
-      <p>We review your current site, Google presence, and local competition. You get a plain-English breakdown of what's hurting you and what to fix — no fluff, no upsell pressure.</p>
-    </div>
-    <div class="how-card scroll-reveal">
-      <div class="how-num">02</div>
-      <h3>We Build &amp; Launch</h3>
-      <p>If you decide to move forward, we design and build your new site in 2–4 weeks. Fast, mobile-first, and SEO-ready from day one. You approve everything before it goes live.</p>
-    </div>
-    <div class="how-card scroll-reveal">
-      <div class="how-num">03</div>
-      <h3>Leads Start Coming In</h3>
-      <p>We optimize your Google Business Profile, build your local citations, and track your rankings. Most clients see measurable improvement within 60–90 days.</p>
-    </div>
-  </div>
-</section>
-
-<!-- AUDIT CTA STRIP -->
-<div class="audit-strip">
-  <div class="section-label" style="justify-content:center;color:rgba(255,255,255,.45);">Free. No Obligation.</div>
-  <h2>Find out why your phone<br><em>isn't ringing.</em></h2>
-  <p>In 24 hours or less, we'll send you a full breakdown of your website's performance, your Google rankings, and exactly what's holding you back.</p>
-  <ul class="audit-list">
-    <li>Website speed &amp; mobile check</li>
-    <li>Google ranking analysis</li>
-    <li>Competitor comparison</li>
-    <li>Actionable fix list</li>
-  </ul>
-  <a href="/contact/?service=Free+Website+Audit&msg=I%27d+like+a+free+audit+of+my+current+website+and+online+presence." class="btn-primary" style="font-size:1rem;padding:1rem 2.25rem;position:relative;z-index:2;">Get My Free Website Audit →</a>
-</div>
-
-<!-- SERVICES -->
-<section class="section-cream">
-  <div class="services-intro">
-    <div>
-      <div class="section-label">What We Do</div>
-      <h2>Everything you need to<br><em>dominate locally</em></h2>
-    </div>
-    <p>One team handles your website, SEO, and marketing — so you never have to manage multiple vendors or wonder who's responsible.</p>
-  </div>
-  <div class="card-grid">
-    <div class="card scroll-reveal">
-      <div class="card-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="3" y="5" width="20" height="13" rx="1.5" stroke="#1a3f6f" stroke-width="1.25"/><path d="M9 21h8M13 18v3" stroke="#1a3f6f" stroke-width="1.25" stroke-linecap="round"/><path d="M3 14h20" stroke="#1a3f6f" stroke-width="1.25"/></svg></div>
-      <h3>Web Design &amp; Development</h3>
-      <p>A website built to convert visitors into calls and form fills. Fast, mobile-first, no page builders — and done in 2–4 weeks.</p>
-      <a href="/services/web-design/" class="card-link">Learn more →</a>
-    </div>
-    <div class="card scroll-reveal">
-      <div class="card-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="9" stroke="#1a3f6f" stroke-width="1.25"/><path d="M13 4v2M13 20v2M4 13h2M20 13h2" stroke="#1a3f6f" stroke-width="1.25" stroke-linecap="round"/><circle cx="13" cy="13" r="3" stroke="#1a3f6f" stroke-width="1.25"/></svg></div>
-      <h3>Local SEO</h3>
-      <p>Get found when someone in your area searches for what you do. We handle Google Business Profile, citations, and keyword targeting.</p>
-      <a href="/services/local-seo/" class="card-link">Learn more →</a>
-    </div>
-    <div class="card scroll-reveal">
-      <div class="card-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M5 21L10.5 15.5" stroke="#1a3f6f" stroke-width="1.25" stroke-linecap="round"/><circle cx="16" cy="10" r="6" stroke="#1a3f6f" stroke-width="1.25"/><circle cx="16" cy="10" r="3" stroke="#1a3f6f" stroke-width="1.25"/><circle cx="16" cy="10" r="1" fill="#1a3f6f"/></svg></div>
-      <h3>Digital Advertising</h3>
-      <p>Google Ads and Facebook campaigns that reach homeowners actively looking for your services — not just anyone browsing.</p>
-      <a href="/services/digital-advertising/" class="card-link">Learn more →</a>
-    </div>
-  </div>
-  <div style="text-align:center;margin-top:2.5rem;">
-    <a href="/services/" class="btn-navy">View All Services →</a>
-  </div>
-</section>
-
-<!-- PORTFOLIO -->
-<section class="section-white">
-  <div class="section-label">Our Work</div>
-  <h2>Real websites. <em>Real businesses.</em></h2>
-  <div class="port-grid">
-    <div class="port-card scroll-reveal">
-      <img src="/images/state-mechanical.png" alt="State Mechanical Heating &amp; Air" onerror="this.style.background='#dce6f0'">
-      <div class="port-overlay"><h3>State Mechanical Heating &amp; Air</h3><a href="http://statemechanicalga.com/" target="_blank" rel="noopener">statemechanicalga.com ↗</a></div>
-    </div>
-    <div class="port-card scroll-reveal">
-      <img src="/images/insquotehub.png" alt="Insurance Quote Hub" onerror="this.style.background='#dce6f0'">
-      <div class="port-overlay"><h3>Insurance Quote Hub</h3><a href="https://insquotehub.com/" target="_blank" rel="noopener">insquotehub.com ↗</a></div>
-    </div>
-    <div class="port-card scroll-reveal">
-      <img src="/images/atharental.png" alt="Atha Rental" onerror="this.style.background='#dce6f0'">
-      <div class="port-overlay"><h3>Atha Rental</h3><a href="https://atharental.com/" target="_blank" rel="noopener">atharental.com ↗</a></div>
-    </div>
-  </div>
-  <div style="text-align:center;margin-top:2.5rem;">
-    <a href="/portfolio/" class="btn-navy" style="background:transparent;color:var(--navy);border:1.5px solid var(--navy);padding:.85rem 2rem;border-radius:2rem;display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;font-weight:500;text-decoration:none;transition:background .2s,color .2s;" onmouseover="this.style.background='var(--navy)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--navy)'">See Full Portfolio</a>
-  </div>
-</section>
-
-<!-- WHY CMS -->
-<section class="section-navy">
-  <div class="section-label">Why CMS</div>
-  <h2>Big agency results.<br><em>Without the big agency cost.</em></h2>
-  <div class="why-grid">
-    <div class="why-item scroll-reveal">
-      <div class="why-num">01</div>
-      <h3>We Speak Your Language</h3>
-      <p>We work specifically with local service businesses. We know what your customers search for and what makes them pick up the phone.</p>
-    </div>
-    <div class="why-item scroll-reveal">
-      <div class="why-num">02</div>
-      <h3>Georgia-Based</h3>
-      <p>We're local. Same time zone, same market, and we actually pick up the phone when you call.</p>
-    </div>
-    <div class="why-item scroll-reveal">
-      <div class="why-num">03</div>
-      <h3>No Outsourcing</h3>
-      <p>Your project is handled by our team — not passed off to overseas contractors or junior freelancers.</p>
-    </div>
-    <div class="why-item scroll-reveal">
-      <div class="why-num">04</div>
-      <h3>You Own Everything</h3>
-      <p>Your website, your domain, your content. No holding your site hostage if you ever want to leave.</p>
-    </div>
-  </div>
-</section>
-
-<!-- FINAL CTA -->
-<div class="final-cta">
-  <div class="section-label" style="justify-content:center;color:rgba(255,255,255,.35);">Take the First Step</div>
-  <h2>Stop losing customers to<br>competitors with <em>better websites.</em></h2>
-  <p>Get a free, no-obligation audit of your current website and online presence. We'll show you exactly what's costing you leads — and how to fix it.</p>
-  <div class="btn-group">
-    <a href="/contact/?service=Free+Website+Audit&msg=I%27d+like+a+free+audit+of+my+current+website+and+online+presence." class="btn-primary" style="font-size:1rem;padding:1rem 2.25rem;">Get My Free Website Audit →</a>
-    <a href="tel:7707789877" class="btn-ghost" style="color:rgba(255,255,255,.6);border-color:rgba(255,255,255,.25);">Or call (770) 778-9877</a>
-  </div>
-  <p class="final-cta-note">Free. No obligation. Response within 24 hours.</p>
-</div>
-
-<script>
-(function(){
-  var strip = document.getElementById('marquee');
-  var track = document.getElementById('marquee-track');
-  var speed = 0.6;
-  var pos = 0;
-  var halfW;
-  var dragging = false;
-  var isDrag = false;
-  var startX = 0;
-  var startPos = 0;
-
-  function getHalfW(){ halfW = track.scrollWidth / 2; }
-  getHalfW();
-  window.addEventListener('resize', getHalfW);
-
-  function tick(){
-    pos -= speed;
-    if(pos <= -halfW) pos += halfW;
-    if(pos > 0) pos -= halfW;
-    track.style.transform = 'translateX(' + pos + 'px)';
-    requestAnimationFrame(tick);
-  }
-  requestAnimationFrame(tick);
-
-  strip.addEventListener('mousemove', function(e){
-    if(dragging) return;
-    var rect = strip.getBoundingClientRect();
-    var pct = (e.clientX - rect.left) / rect.width;
-    speed = (pct - 0.5) * 4;
-  });
-  strip.addEventListener('mouseleave', function(){ if(!dragging) speed = 0.6; });
-  strip.addEventListener('mousedown', function(e){ dragging=true; isDrag=false; startX=e.clientX; startPos=pos; strip.style.cursor='grabbing'; });
-  window.addEventListener('mousemove', function(e){ if(!dragging) return; var dx=e.clientX-startX; if(Math.abs(dx)>4) isDrag=true; pos=startPos+dx; });
-  window.addEventListener('mouseup', function(){ if(!dragging) return; dragging=false; strip.style.cursor='grab'; speed=0.6; });
-  strip.addEventListener('click', function(e){ if(isDrag) e.preventDefault(); }, true);
-  strip.addEventListener('touchstart', function(e){ dragging=true; isDrag=false; startX=e.touches[0].clientX; startPos=pos; },{passive:true});
-  strip.addEventListener('touchmove', function(e){ if(!dragging) return; var dx=e.touches[0].clientX-startX; if(Math.abs(dx)>4) isDrag=true; pos=startPos+dx; },{passive:true});
-  strip.addEventListener('touchend', function(){ dragging=false; speed=0.6; });
-})();
-</script>
+<section class="s-white"><div class="wrap">
+<h2>Get a free audit of your site and Google presence</h2>
+<p class="lead">In 24 hours or less we send you a plain-English breakdown of what is holding your site back.</p>
+<ul class="checks"><li>Website speed and mobile check</li><li>Google ranking analysis</li><li>Competitor comparison</li><li>A short list of fixes, in order</li></ul>
+<div class="btn-group"><a href="/free-audit/" class="btn" >Get a Free Website Audit</a><a href="tel:7707789877" class="btn-text">Or call (770) 778-9877</a></div>
+<p style="margin-top:1rem;font-size:.9rem;">Free. No obligation.</p>
+</div></section>
+</main>
 <script src="/nav.js"></script>
 </body>
 </html>
