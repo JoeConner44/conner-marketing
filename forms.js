@@ -23,6 +23,11 @@
   var sel = document.getElementById('service');
   if (qs && sel) for (var i = 0; i < sel.options.length; i++) if (sel.options[i].text.toLowerCase().indexOf(qs.toLowerCase().split(' ')[0]) === 0) { sel.selectedIndex = i; break; }
 
+  // Prefill the website field on the audit form from ?site= (set by the audit widget).
+  var site = new URLSearchParams(window.location.search).get('site');
+  var siteInput = document.getElementById('website');
+  if (site && siteInput) siteInput.value = site.replace(/^https?:\/\//, '');
+
   document.querySelectorAll('form[data-lead-form]').forEach(function (form) {
     var kind = form.getAttribute('data-lead-form');
     var msg = form.querySelector('.form-msg');

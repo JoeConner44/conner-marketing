@@ -286,3 +286,31 @@ footer { background: var(--brand-deep); color: var(--white); padding: 4.5rem 4re
 }
 
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* AUDIT WIDGET */
+.aw-wrap { display: grid; grid-template-columns: 1fr 1.1fr; gap: 4rem; align-items: start; }
+.aw { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 2rem; box-shadow: 0 18px 44px rgba(1,24,58,0.12); }
+.aw h3 { font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 1.15rem; margin-bottom: 0.25rem; }
+.aw .aw-sub { font-size: 0.95rem; margin-bottom: 1.25rem; }
+.aw-row { display: flex; gap: 0.75rem; }
+.aw-row input { flex: 1; min-width: 0; }
+.aw-status { margin-top: 1rem; font-size: 0.95rem; color: var(--brand-mid); font-weight: 500; }
+.aw-out { margin-top: 1.5rem; }
+.aw-host { font-size: 0.9rem; margin-bottom: 1rem; }
+.aw-gauges { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.aw-gauge { position: relative; text-align: center; }
+.aw-gauge svg { width: 100%; max-width: 110px; display: block; margin: 0 auto; transform: rotate(-90deg); }
+.aw-gauge circle { fill: none; stroke-width: 9; }
+.aw-gauge .bg { stroke: var(--line); }
+.aw-gauge .fg { stroke-linecap: round; }
+.aw-gauge.good .fg { stroke: #1a8f4d; } .aw-gauge.mid .fg { stroke: #e0a100; } .aw-gauge.bad .fg { stroke: #c9372c; }
+.aw-gauge .num { position: absolute; top: 0; left: 0; right: 0; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.9rem; color: var(--ink); line-height: 110px; }
+.aw-gauge .lab { display: block; font-size: 0.82rem; font-weight: 600; color: var(--ink); margin-top: 0.4rem; }
+.aw-checks { list-style: none; margin: 1.5rem 0 1rem; display: grid; gap: 0.45rem; font-size: 0.92rem; }
+.aw-checks li { display: flex; gap: 0.6rem; }
+.aw-checks span { font-weight: 700; width: 1rem; flex: none; }
+.aw-checks .ok span { color: #1a8f4d; } .aw-checks .no span { color: #c9372c; }
+.aw-verdict { color: var(--ink); font-weight: 500; margin-bottom: 0.5rem; }
+.aw-note { font-size: 0.85rem; margin-bottom: 1.25rem; }
+@media (max-width: 1024px) { .aw-wrap { grid-template-columns: 1fr; gap: 2.5rem; } }
+@media (max-width: 480px) { .aw-row { flex-direction: column; } .aw { padding: 1.4rem; } }
